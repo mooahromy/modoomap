@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="12dp">
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:background="@drawable/shape_imageview_profile"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/img" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/TextViewCustomStyle_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"
+        app:layout_constraintTop_toTopOf="@id/iv_profile"
+        tools:text="o_sa8204@naver.com" />
+
+    <TextView
+        android:id="@+id/tv_created_at"
+        style="@style/TextViewCustomStyle_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/notosans_kr_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/gray_300"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_username"
+        app:layout_constraintStart_toEndOf="@id/tv_username"
+        app:layout_constraintTop_toTopOf="@id/tv_username"
+        tools:text="12분 전" />
+
+    <ImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_menu_dots"
+        app:layout_constraintBaseline_toBaselineOf="@id/iv_profile"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/notosans_kr_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_username"
+        app:layout_constraintTop_toBottomOf="@id/iv_profile"
+        tools:text="예전에 종로구청에서 저는 연락이 오더라구요!! 조금만 기다
+려보셔도 좋을 것 같아요." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
