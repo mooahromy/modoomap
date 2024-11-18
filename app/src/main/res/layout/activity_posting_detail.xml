@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.posting.detail.PostingDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_posting_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_action"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:contentInsetStart="0dp"
+            app:layout_anchor="@+id/abl_default">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_back" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_top"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:dividerColor="@color/border" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_comment_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/abl_posting_detail">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_posting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="22dp"
+                android:paddingVertical="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/shape_imageview_profile"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/img" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    style="@style/TextViewCustomStyle_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+                    app:layout_constraintStart_toEndOf="@id/iv_profile"
+                    app:layout_constraintTop_toTopOf="@id/iv_profile"
+                    tools:text="o_sa8204@naver.com" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextViewCustomStyle_medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:breakStrategy="high_quality"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/iv_profile"
+                    app:layout_constraintTop_toBottomOf="@id/iv_profile"
+                    tools:text="종로구 근처에서 국민행복카드 보신 분 알려주실 수 있나요?" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:breakStrategy="high_quality"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/gray_750"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_title"
+                    app:layout_constraintStart_toStartOf="@id/tv_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"
+                    tools:text="종로구 근처에서 국민행복카드 잃어버렸는데, 아직도 무소식
+입니다. 경찰서도 가보려고 하는데 그래도 보신 분 있다면 알려주시면 감사하겠습니다." />
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_comment"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@id/tv_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content" />
+
+                <TextView
+                    android:id="@+id/tv_commet_count"
+                    style="@style/TextViewCustomStyle_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/posting_detail"
+                    android:textSize="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_comment"
+                    app:layout_constraintStart_toEndOf="@id/iv_comment"
+                    app:layout_constraintTop_toTopOf="@id/iv_comment"
+                    tools:text="3" />
+
+                <TextView
+                    android:id="@+id/tv_vertical_divider"
+                    style="@style/TextViewCustomStyle_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="|"
+                    android:textColor="@color/divider_vertical"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_commet_count"
+                    app:layout_constraintStart_toEndOf="@id/tv_commet_count" />
+
+                <TextView
+                    android:id="@+id/tv_posting_time"
+                    style="@style/TextViewCustomStyle_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/posting_detail"
+                    android:textSize="10dp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tv_vertical_divider"
+                    app:layout_constraintStart_toEndOf="@id/tv_vertical_divider"
+                    tools:text="36분 전" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_middle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:dividerColor="@color/border"
+                app:layout_constraintTop_toBottomOf="@id/cl_posting" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_comment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_middle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_comment_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:dividerColor="@color/border"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_comment"
+            style="@style/TextViewCustomStyle_medium"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="18dp"
+            android:background="@drawable/bg_edittext_comment"
+            android:clipToOutline="true"
+            android:hint="댓글을 입력해주세요"
+            android:paddingVertical="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="40dp"
+            android:textColorHint="@color/gray_300"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="32dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_send"
+            app:layout_constraintBottom_toBottomOf="@id/et_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_comment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
