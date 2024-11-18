@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_map"
+        android:title="시설찾기"
+        android:iconTint="@color/gray_550"
+        android:icon="@drawable/ic_map"/>
+    <item
+        android:id="@+id/menu_posting"
+        android:title="커뮤니티"
+        android:iconTint="@color/gray_550"
+        android:icon="@drawable/ic_posting"/>
+    <item
+        android:id="@+id/menu_profile"
+        android:title="마이페이지"
+        android:iconTint="@color/gray_550"
+        android:icon="@drawable/ic_profile"/>
+</menu>

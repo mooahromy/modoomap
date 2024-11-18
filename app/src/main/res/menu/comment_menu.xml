@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_delete"
+        android:title="삭제"
+        android:visible="false" />
+    <item
+        android:id="@+id/action_report"
+        android:title="신고"
+        android:visible="false" />
+</menu>
