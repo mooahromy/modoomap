@@ -3,7 +3,7 @@
     </div>
     <div style="text-align: left;"> 
     <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> about mooahromy </h2>  
-    <div style="font-weight: 700; font-size: 15px; text-align: left; color: #282d33;"> <li> 배화여자대학교 소프트웨어공학과 팀 무아로미</li><li> 사회적약자를 위한 지도 애플리케이션 모두의매블</li><li> 202154041 이세언</li><li> 202254059 유승연 </div> 
+    <div style="font-weight: 700; font-size: 15px; text-align: left; color: #282d33;"> <li> 배화여자대학교 소프트웨어공학과 팀 무아로미🐱🐶</li><li> 사회적약자를 위한 지도 애플리케이션 모두의매블</li><li> 202154041 이세언</li><li> 202254059 유승연 </div> 
     </div>
     <div style="text-align: left;">
     <h2 style="border-bottom: 1px solid #d8dee4; color: #282d33;"> 🛠️ Tech Stacks </h2> <br> 
