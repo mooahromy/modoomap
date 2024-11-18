@@ -19,4 +19,6 @@
           </div>  <br> 
     <div style="text-align: left;">  </div> 
     </div>
+
+    [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mooahromy)](https://github.com/mooahromy/github-readme-stats)
     
